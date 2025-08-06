@@ -36,19 +36,56 @@ Satire Empire/
 │   ├── roadmap.md            # Development phases and milestones
 │   ├── technical.md          # Technical architecture and stack
 │   ├── vision.md             # Game vision and high-level concept
+│   ├── examples.md           # Code examples and patterns
 │   └── README.md             # Documentation overview
-├── examples/                 # Example implementations and use cases
-├── template/                 # Template system for project generation
+├── examples/                 # Code examples and patterns
+│   ├── game-engine-example.ts       # Game engine patterns
+│   ├── ui-component-example.tsx     # UI components with Neobrutalism
+│   ├── cloudflare-workers-example.ts # Backend patterns
+│   └── ui-component-example.ts      # TypeScript UI examples
+├── game/ ⭐                  # MAIN GAME IMPLEMENTATION
+│   ├── client/              # Frontend TypeScript application
+│   │   ├── components/      # Game UI components (to be implemented)
+│   │   ├── services/        # Client services (to be implemented)
+│   │   ├── stores/          # State management (to be implemented)
+│   │   ├── utils/           # Client utilities (to be implemented)
+│   │   ├── main.ts          # ✅ App entry point
+│   │   ├── index.html       # ✅ PWA-ready HTML template
+│   │   └── vite.config.ts   # ✅ Vite build configuration
+│   ├── server/              # Cloudflare Workers backend
+│   │   ├── api/             # API endpoints (to be implemented)
+│   │   ├── game-engine/     # ✅ Core game logic
+│   │   │   ├── actions/     # Player actions (to be implemented)
+│   │   │   ├── events/      # Game events (to be implemented)
+│   │   │   ├── factions/    # ✅ Faction system with Influencer Cult
+│   │   │   └── engine.ts    # ✅ Main game engine
+│   │   ├── multiplayer/     # Real-time features (to be implemented)
+│   │   ├── persistence/     # Data storage (to be implemented)
+│   │   ├── worker.ts        # ✅ Cloudflare Workers entry point
+│   │   └── wrangler.toml    # ✅ Cloudflare configuration
+│   ├── shared/              # ✅ Shared TypeScript code
+│   │   ├── types/           # ✅ Complete type definitions
+│   │   │   ├── game.ts      # ✅ Game state and player types
+│   │   │   ├── faction.ts   # ✅ Faction system types
+│   │   │   └── api.ts       # ✅ API contract types
+│   │   ├── constants/       # ✅ Game configuration
+│   │   │   └── gameConfig.ts # ✅ Balance and timing constants
+│   │   └── index.ts         # ✅ Barrel exports
+│   ├── package.json         # ✅ Game dependencies and scripts
+│   └── README.md            # ✅ Game development guide
+├── template/                # Template system for project generation
 │   ├── use-cases/
 │   │   ├── mcp-server/      # Model Context Protocol server examples
 │   │   ├── pydantic-ai/     # Pydantic AI agent examples
 │   │   └── template-generator/
-└── ui/                      # User interface components and styling
+└── ui/                      # Neobrutalism UI component library
     ├── src/
     │   ├── components/      # UI components
     │   ├── app/            # Next.js app structure
     │   └── ...
 ```
+
+**✅ = Implemented | 🔄 = In Progress | ⭐ = Core Focus**
 
 ## 🎯 Game Design
 
@@ -161,17 +198,25 @@ The game follows five core design pillars:
 
 See our [Development Roadmap](docs/roadmap.md) for detailed plans and milestones.
 
-### **Current Phase**
+### **Current Phase: Foundation Complete ✅**
 - ✅ Project structure and documentation
 - ✅ Technical architecture planning
 - ✅ Design system specification
 - ✅ Game mechanics design
+- ✅ **NEW**: Complete game/ folder structure implemented
+- ✅ **NEW**: Core game engine with turn-based mechanics
+- ✅ **NEW**: Shared TypeScript type system
+- ✅ **NEW**: Faction system (Influencer Cult complete)
+- ✅ **NEW**: Cloudflare Workers backend foundation
+- ✅ **NEW**: Frontend application structure
 
-### **Upcoming Features**
-- 🔄 Core multiplayer functionality
-- 🔄 Faction system implementation
-- 🔄 Map integration and styling
-- 🔄 AI bot framework
+### **Next Phase: Core Implementation 🔄**
+- 🔄 UI component integration (Neobrutalism design)
+- 🔄 Interactive map with Maplibre GL JS
+- 🔄 Real-time multiplayer with Partykit
+- 🔄 Remaining faction implementations (Rogue AI, Hyper-Capitalist)
+- 🔄 API endpoint development
+- 🔄 Testing framework implementation
 
 ## 🤝 Contributing
 
