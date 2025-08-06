@@ -33,11 +33,9 @@ Satire Empire/
 │   ├── assets.md             # Design system and visual requirements
 │   ├── gameplay.md           # Core game mechanics and systems
 │   ├── multiplayer.md        # Multiplayer architecture and networking
-│   ├── roadmap.md            # Development phases and milestones
 │   ├── technical.md          # Technical architecture and stack
 │   ├── vision.md             # Game vision and high-level concept
-│   ├── examples.md           # Code examples and patterns
-│   └── README.md             # Documentation overview
+│   └── examples.md           # Code examples and patterns
 ├── examples/                 # Code examples and patterns
 │   ├── game-engine-example.ts       # Game engine patterns
 │   ├── ui-component-example.tsx     # UI components with Neobrutalism
@@ -78,14 +76,28 @@ Satire Empire/
 │   │   ├── mcp-server/      # Model Context Protocol server examples
 │   │   ├── pydantic-ai/     # Pydantic AI agent examples
 │   │   └── template-generator/
-└── ui/                      # Neobrutalism UI component library
-    ├── src/
-    │   ├── components/      # UI components
-    │   ├── app/            # Next.js app structure
-    │   └── ...
+├── ui/                      # Neobrutalism UI component library
+│   ├── src/
+│   │   ├── components/      # UI components
+│   │   ├── app/            # Next.js app structure
+│   │   └── ...
+├── ROADMAP.md               # ⭐ Development phases and milestones
+├── WORKFLOW_GUIDE.md        # ⭐ AI development workflow and context engineering
+└── .cursorrules             # ⭐ AI assistant rules and development standards
 ```
 
 **✅ = Implemented | 🔄 = In Progress | ⭐ = Core Focus**
+
+## 📚 Documentation Index
+
+### **Core Documents**
+- **[Game Vision](docs/vision.md)** - High-level concept, design pillars, and gameplay overview
+- **[Gameplay Specification](docs/gameplay.md)** - Core mechanics, turn structure, and victory conditions
+- **[Technical Architecture Guide](docs/technical.md)** - Complete technical documentation: tech stack, system architecture, project structure, and development workflow
+- **[Multiplayer Specification](docs/multiplayer.md)** - Real-time architecture and state management
+- **[Asset Specification](docs/assets.md)** - Design system, visual requirements, and component library
+- **[Development Roadmap](ROADMAP.md)** - Phases, milestones, and success metrics
+- **[Code Examples](docs/examples.md)** - Implementation patterns and code samples
 
 ## 🎯 Game Design
 
@@ -133,12 +145,37 @@ Each faction is asymmetric with unique abilities:
 
 ## 📋 Getting Started
 
-### **Prerequisites**
+### **For Developers**
+1. **Start Here:** [Technical Architecture Guide](docs/technical.md) - complete technical reference with implemented system architecture and project structure
+2. **Get Coding:** Navigate to `game/` folder - fully implemented foundation with TypeScript, game engine, and faction system
+3. **Check Progress:** [Development Roadmap](ROADMAP.md) for current priorities and completed milestones
+4. **Understand Systems:** [Multiplayer Specification](docs/multiplayer.md) for real-time features (Partykit integration ready)
+5. **Game Mechanics:** [Gameplay Specification](docs/gameplay.md) for core game mechanics (turn-based "News Cycle" implemented)
+6. **Code Patterns:** [Code Examples](docs/examples.md) for working implementation patterns and samples
+
+### **Quick Start Development**
+```bash
+cd game/
+npm install
+npm run dev  # Starts both client (Vite) and server (Wrangler)
+```
+
+### **For Designers**
+1. Study the [Asset Specification](docs/assets.md) for design system details
+2. Review the [Game Vision](docs/vision.md) for design principles
+3. Understand the Neobrutalism aesthetic requirements
+4. Reference the [Gameplay Specification](docs/gameplay.md) for UI requirements
+
+### **For Stakeholders**
+1. Start with the [Game Vision](docs/vision.md) for high-level understanding
+2. Review the [Development Roadmap](ROADMAP.md) for timeline and milestones
+3. Check success metrics and risk mitigation strategies
+4. Explore the [Gameplay Specification](docs/gameplay.md) for feature scope
+
+### **Prerequisites & Installation**
 - Node.js 18+ 
 - Python 3.8+ (for AI agents)
 - Git
-
-### **Installation**
 
 1. **Clone the repository**
    ```bash
@@ -148,16 +185,24 @@ Each faction is asymmetric with unique abilities:
 
 2. **Install dependencies**
    ```bash
-   # Install UI dependencies
-   cd ui
+   # Install game dependencies (main implementation)
+   cd game/
+   npm install
+   
+   # Install UI library dependencies (optional)
+   cd ../ui/
    npm install
    ```
 
 3. **Start development**
    ```bash
-   # Start UI development server
-   cd ui
-   npm run dev
+   # Start game development (recommended)
+   cd game/
+   npm run dev  # Starts both client and server
+   
+   # OR start UI library development
+   cd ui/
+   npm run dev  # UI component development
    ```
 
 ## 🎨 Design Philosophy
@@ -170,14 +215,14 @@ The game follows five core design pillars:
 4. **Edge-First Performance** - Built for speed and responsiveness
 5. **Single Developer Maintainability** - Clean, understandable codebase
 
-## 📚 Documentation
+## 🔗 Key Resources
 
-- [Vision](docs/vision.md) - Game vision and high-level concept
-- [Gameplay](docs/gameplay.md) - Core game mechanics and systems
-- [Technical](docs/technical.md) - Technical architecture and stack
-- [Multiplayer](docs/multiplayer.md) - Multiplayer architecture and networking
-- [Assets](docs/assets.md) - Design system and visual requirements
-- [Roadmap](docs/roadmap.md) - Development phases and milestones
+- **Design System:** Neobrutalism Components library (`ui/` folder)
+- **Map Engine:** Maplibre GL JS documentation
+- **Backend:** Cloudflare Workers and Partykit
+- **Testing:** Vitest for unit tests, Playwright for E2E
+- **Performance:** Cloudflare's global edge network
+- **AI Development:** Context engineering with specialized agents (`agents/` folder)
 
 ## 🏛️ Architecture
 
@@ -196,7 +241,7 @@ The game follows five core design pillars:
 
 ## 🎯 Roadmap
 
-See our [Development Roadmap](docs/roadmap.md) for detailed plans and milestones.
+See our [Development Roadmap](ROADMAP.md) for detailed plans and milestones.
 
 ### **Current Phase: Foundation Complete ✅**
 - ✅ Project structure and documentation
@@ -220,7 +265,20 @@ See our [Development Roadmap](docs/roadmap.md) for detailed plans and milestones
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+We welcome contributions! This project uses context engineering with AI development agents.
+
+### **Development Workflow**
+1. Read [WORKFLOW_GUIDE.md](WORKFLOW_GUIDE.md) for the complete development process
+2. Use [.cursorrules](.cursorrules) for AI-assisted development standards
+3. Reference specialized agents in `agents/` for domain expertise
+4. Follow the established patterns in `examples/` and `game/`
+
+### **Key Areas for Contribution**
+- **Game Implementation:** Core mechanics, factions, and UI components
+- **Technical Architecture:** Performance optimization and scalability
+- **Design System:** Neobrutalism components and accessibility
+- **Testing:** Comprehensive coverage and quality assurance
+- **Documentation:** Keep specs updated with implementation changes
 
 ### **Development Workflow**
 

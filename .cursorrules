@@ -3,7 +3,7 @@
 
 ### 🎮 Project Awareness & Context
 - **Always read the game documentation** at the start of conversations: `docs/vision.md`, `docs/gameplay.md`, `docs/technical.md`
-- **Check the development roadmap** in `docs/roadmap.md` before starting new features
+- **Check the development roadmap** in `ROADMAP.md` before starting new features
 - **Use consistent patterns** from the `examples/` folder and follow the Neobrutalism design system
 - **Leverage specialized agents** from the `agents/` folder for specific development tasks
 - **Follow the context engineering workflow** from `template/` for complex features

@@ -19,7 +19,7 @@ Before any development task, ensure the AI reads the relevant documentation:
 - `docs/vision.md` - Game vision and design pillars  
 - `docs/technical.md` - Architecture and implementation details
 - `docs/gameplay.md` - Game mechanics and balance
-- `docs/roadmap.md` - Current phase and priorities
+- `ROADMAP.md` - Current phase and priorities
 - `examples/` - Working code patterns
 
 ### **2. Leverage Specialized Agents**
