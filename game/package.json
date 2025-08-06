@@ -1,0 +1,52 @@
+{
+  "name": "satire-empire-game",
+  "version": "0.1.0",
+  "description": "Satirical multiplayer strategy game - main game package",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
+    "dev:client": "vite --config client/vite.config.ts",
+    "dev:server": "wrangler dev server/worker.ts",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "vite build --config client/vite.config.ts",
+    "build:server": "wrangler deploy server/worker.ts",
+    "test": "vitest",
+    "test:e2e": "playwright test",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint . --ext .ts,.tsx",
+    "lint:fix": "eslint . --ext .ts,.tsx --fix",
+    "preview": "vite preview --config client/vite.config.ts"
+  },
+  "dependencies": {
+    "partykit": "^0.0.111",
+    "maplibre-gl": "^4.1.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240208.0",
+    "@types/node": "^20.11.19",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.56.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.1.3",
+    "vitest": "^1.2.2",
+    "wrangler": "^3.28.2",
+    "@playwright/test": "^1.41.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "Satire Empire Team",
+  "license": "MIT",
+  "keywords": [
+    "game",
+    "strategy",
+    "multiplayer",
+    "satirical",
+    "web",
+    "typescript",
+    "cloudflare"
+  ]
+}

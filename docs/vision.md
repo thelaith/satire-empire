@@ -1,4 +1,4 @@
-# **Game Vision: Satire Empire**
+# **Vision**
 
 ## **1. High-Level Concept**
 

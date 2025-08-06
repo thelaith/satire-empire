@@ -1,16 +1,23 @@
 # Satire Empire
 
-A comprehensive multi-agent development platform with specialized AI agents for various development tasks, designed to streamline and enhance the software development process.
+A satirical, turn-based multiplayer strategy game where players embody outlandish modern factions to compete for global influence. Built for the modern web with a unique Neobrutalist aesthetic.
 
-## 🎯 Overview
+## 🎮 Game Overview
 
-Satire Empire is a sophisticated platform that leverages specialized AI agents to handle different aspects of software development, from core development tasks to infrastructure management, quality assurance, and business analysis. The platform provides a structured approach to multi-agent collaboration in software projects.
+**Satire Empire** is a web-first multiplayer strategy game where players take on the role of absurd modern factions (rogue AI, influencer cults, hyper-capitalist corporations) competing for global dominance. Each turn represents a day in the global news cycle, where players compete to make headlines and shape the narrative.
+
+### **Core Features**
+- **Asymmetric Gameplay**: Each faction has unique abilities that parody real-world institutions
+- **Fast-Paced Matches**: 10-20 minute games for 2-8 players
+- **Modern Web Platform**: PWA with responsive design for desktop and mobile
+- **Neobrutalist Aesthetics**: Bold, satirical visual design
+- **Edge-First Performance**: Built on Cloudflare's global network for low latency
 
 ## 🏗️ Project Structure
 
 ```
 Satire Empire/
-├── agents/                    # Specialized AI agents for different development roles
+├── agents/                    # AI agents for development assistance
 │   ├── categories/
 │   │   ├── 01-core-development/     # Backend, Frontend, Fullstack, etc.
 │   │   ├── 02-language-specialists/ # Python, JavaScript, Rust, etc.
@@ -22,11 +29,14 @@ Satire Empire/
 │   │   ├── 08-business-product/     # Product, Business, UX, etc.
 │   │   ├── 09-meta-orchestration/   # Multi-agent coordination
 │   │   └── 10-research-analysis/    # Research, Analysis, etc.
-├── docs/                     # Project documentation and specifications
-│   ├── technical-specification.md
-│   ├── development-roadmap.md
-│   ├── game-vision.md
-│   └── ...
+├── docs/                     # Game documentation and specifications
+│   ├── assets.md             # Design system and visual requirements
+│   ├── gameplay.md           # Core game mechanics and systems
+│   ├── multiplayer.md        # Multiplayer architecture and networking
+│   ├── roadmap.md            # Development phases and milestones
+│   ├── technical.md          # Technical architecture and stack
+│   ├── vision.md             # Game vision and high-level concept
+│   └── README.md             # Documentation overview
 ├── examples/                 # Example implementations and use cases
 ├── template/                 # Template system for project generation
 │   ├── use-cases/
@@ -40,42 +50,58 @@ Satire Empire/
     │   └── ...
 ```
 
-## 🚀 Key Features
+## 🎯 Game Design
 
-### Multi-Agent Architecture
-- **Specialized Agents**: 100+ specialized AI agents for different development roles
-- **Category Organization**: Agents organized into 10 logical categories
-- **Collaborative Workflows**: Agents can work together on complex projects
+### **Core Gameplay Loop: "The News Cycle"**
+Each turn represents a single day in the global news cycle:
+1. **Morning Brief (45s)**: World events and resource generation
+2. **Action Phase (90-120s)**: Players queue actions simultaneously
+3. **Breaking News Resolution (45s)**: Actions resolve with dramatic presentation
 
-### Development Tools
-- **Template System**: Reusable project templates and use cases
-- **MCP Integration**: Model Context Protocol server examples
-- **Pydantic AI**: Structured AI agent implementations
-- **UI Components**: Modern, accessible UI component library
+### **Victory Conditions**
+- **Territorial Domination**: Control a majority of the world's regions
+- **Economic Empire**: Accumulate target wealth
+- **Cultural Hegemony**: Convert majority of regions to your influence
+- **Innovation Leader**: Achieve key technological breakthroughs
+- **Attention Monopoly**: Maintain #1 trending topic for set turns
 
-### Documentation & Standards
-- **Comprehensive Docs**: Technical specifications, roadmaps, and guides
-- **Best Practices**: Established patterns for multi-agent development
-- **Quality Assurance**: Built-in testing and validation frameworks
+### **Factions**
+Each faction is asymmetric with unique abilities:
+- **The Influencer Cult**: Viral marketing and social manipulation
+- **The Rogue AI**: Technological disruption and automation
+- **The Hyper-Capitalist Corporation**: Economic warfare and market control
+- *More factions in development...*
 
 ## 🛠️ Technology Stack
 
-- **Frontend**: Next.js, TypeScript, Tailwind CSS
-- **UI Components**: Custom component library with accessibility focus
-- **Backend**: Node.js, Python (for AI agents)
-- **Protocols**: Model Context Protocol (MCP)
-- **AI/ML**: Pydantic AI, structured output patterns
-- **Testing**: Vitest, Jest, Playwright
-- **Documentation**: Markdown, MDX
+### **Frontend**
+- **Framework**: TypeScript with ES modules
+- **UI Library**: Neobrutalism Components
+- **Map Engine**: Maplibre GL JS
+- **Build Tool**: Vite with TypeScript support
+- **PWA**: Service Worker for offline capabilities
+
+### **Backend**
+- **Runtime**: Cloudflare Workers with ES modules
+- **Real-time**: Partykit for multiplayer
+- **Database**: Cloudflare D1 for structured data
+- **Storage**: Cloudflare KV for session data
+- **CDN**: Cloudflare's global network
+
+### **Development Tools**
+- **Version Control**: Git with conventional commits
+- **Testing**: Vitest for unit tests, Playwright for E2E
+- **Linting**: ESLint with TypeScript support
+- **Formatting**: Prettier for consistent code style
 
 ## 📋 Getting Started
 
-### Prerequisites
+### **Prerequisites**
 - Node.js 18+ 
-- Python 3.8+
+- Python 3.8+ (for AI agents)
 - Git
 
-### Installation
+### **Installation**
 
 1. **Clone the repository**
    ```bash
@@ -88,10 +114,6 @@ Satire Empire/
    # Install UI dependencies
    cd ui
    npm install
-   
-   # Install template dependencies (if needed)
-   cd ../template/use-cases/mcp-server
-   npm install
    ```
 
 3. **Start development**
@@ -101,46 +123,61 @@ Satire Empire/
    npm run dev
    ```
 
-## 🎮 Usage
+## 🎨 Design Philosophy
 
-### Working with Agents
+The game follows five core design pillars:
 
-Each agent in the `agents/` directory is designed for specific development tasks:
+1. **Satirical Depth Through Asymmetry** - Each faction parodies real-world institutions
+2. **Accessible Complexity** - Simple actions with deep strategic interactions
+3. **The World is a Stage** - Narrative control as the ultimate weapon
+4. **Edge-First Performance** - Built for speed and responsiveness
+5. **Single Developer Maintainability** - Clean, understandable codebase
 
-- **Core Development**: Backend, frontend, fullstack development
-- **Language Specialists**: Python, JavaScript, Rust, and more
-- **Infrastructure**: Cloud architecture, DevOps, security
-- **Quality & Security**: Testing, security auditing, QA
-- **Data & AI**: Machine learning, data science, AI engineering
-- **Developer Experience**: Tooling, documentation, DX optimization
-- **Specialized Domains**: Blockchain, gaming, IoT development
-- **Business & Product**: Product management, business analysis
-- **Meta Orchestration**: Multi-agent coordination and workflow management
-- **Research & Analysis**: Market research, competitive analysis
+## 📚 Documentation
 
-### Using Templates
+- [Vision](docs/vision.md) - Game vision and high-level concept
+- [Gameplay](docs/gameplay.md) - Core game mechanics and systems
+- [Technical](docs/technical.md) - Technical architecture and stack
+- [Multiplayer](docs/multiplayer.md) - Multiplayer architecture and networking
+- [Assets](docs/assets.md) - Design system and visual requirements
+- [Roadmap](docs/roadmap.md) - Development phases and milestones
 
-The `template/` directory contains reusable project templates:
+## 🏛️ Architecture
 
-- **MCP Server**: Model Context Protocol server implementations
-- **Pydantic AI**: Structured AI agent patterns
-- **Template Generator**: Automated template creation tools
+### **Game Architecture**
+- **Client-Server**: Cloudflare Workers backend with TypeScript frontend
+- **Real-time**: Partykit for low-latency multiplayer
+- **State Management**: Durable Objects for game state persistence
+- **Map System**: Maplibre GL JS for interactive global map
+- **PWA**: Progressive Web App for mobile and desktop
 
-### UI Components
+### **Development Approach**
+- **AI-Assisted Development**: Using specialized agents for different development tasks
+- **Template System**: Reusable patterns for rapid development
+- **Component Library**: Neobrutalism design system
+- **Type Safety**: Full TypeScript coverage throughout
 
-The `ui/` directory contains a comprehensive UI component library:
+## 🎯 Roadmap
 
-- Modern, accessible components
-- Dark/light theme support
-- Responsive design
-- TypeScript support
-- Storybook documentation
+See our [Development Roadmap](docs/roadmap.md) for detailed plans and milestones.
+
+### **Current Phase**
+- ✅ Project structure and documentation
+- ✅ Technical architecture planning
+- ✅ Design system specification
+- ✅ Game mechanics design
+
+### **Upcoming Features**
+- 🔄 Core multiplayer functionality
+- 🔄 Faction system implementation
+- 🔄 Map integration and styling
+- 🔄 AI bot framework
 
 ## 🤝 Contributing
 
 We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
-### Development Workflow
+### **Development Workflow**
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -148,55 +185,13 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-### Code Standards
+### **Code Standards**
 
 - TypeScript for all new code
 - Comprehensive testing with Vitest/Jest
 - Accessibility compliance
 - Documentation for all public APIs
 - Consistent code formatting with Prettier
-
-## 📚 Documentation
-
-- [Technical Specification](docs/technical-specification.md)
-- [Development Roadmap](docs/development-roadmap.md)
-- [Game Vision](docs/game-vision.md)
-- [Gameplay Specification](docs/gameplay-specification.md)
-- [Multiplayer Specification](docs/multiplayer-specification.md)
-
-## 🏛️ Architecture
-
-### Multi-Agent System Design
-
-The platform uses a sophisticated multi-agent architecture where:
-
-1. **Specialized Agents**: Each agent has specific expertise and capabilities
-2. **Orchestration Layer**: Meta-agents coordinate complex workflows
-3. **Context Management**: Shared context and knowledge across agents
-4. **Quality Gates**: Validation and testing at each stage
-
-### Technology Integration
-
-- **MCP Protocol**: Enables agent communication and tool integration
-- **Pydantic AI**: Provides structured, type-safe AI interactions
-- **Next.js UI**: Modern, performant user interface
-- **Template System**: Reusable project patterns and configurations
-
-## 🎯 Roadmap
-
-See our [Development Roadmap](docs/development-roadmap.md) for detailed plans and milestones.
-
-### Current Phase
-- ✅ Core platform structure
-- ✅ Multi-agent architecture
-- ✅ UI component library
-- ✅ Template system
-
-### Upcoming Features
-- 🔄 Enhanced agent collaboration
-- 🔄 Advanced orchestration workflows
-- 🔄 Extended template library
-- 🔄 Performance optimizations
 
 ## 📄 License
 
@@ -205,9 +200,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 - Built with modern web technologies
-- Inspired by multi-agent AI research
+- Inspired by satirical strategy games
 - Community-driven development approach
-- Focus on developer experience and accessibility
+- Focus on performance and accessibility
 
 ## 📞 Support
 
@@ -217,4 +212,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Satire Empire** - Empowering developers with intelligent multi-agent collaboration. 🚀 
+**Satire Empire** - Where strategy meets satire in the battle for global influence. 🎮 

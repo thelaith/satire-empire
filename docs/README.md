@@ -5,12 +5,13 @@ Welcome to the comprehensive documentation for **Satire Empire**, a satirical mu
 ## **📚 Documentation Index**
 
 ### **Core Documents**
-- **[Game Vision](game-vision.md)** - High-level concept, design pillars, and gameplay overview
-- **[Gameplay Specification](gameplay-specification.md)** - Core mechanics, turn structure, and victory conditions
-- **[Technical Specification](technical-specification.md)** - Architecture, tech stack, and performance requirements
-- **[Multiplayer Specification](multiplayer-specification.md)** - Real-time architecture and state management
-- **[Asset Specification](asset-specification.md)** - Design system, visual requirements, and component library
-- **[Development Roadmap](development-roadmap.md)** - Phases, milestones, and success metrics
+- **[Game Vision](vision.md)** - High-level concept, design pillars, and gameplay overview
+- **[Gameplay Specification](gameplay.md)** - Core mechanics, turn structure, and victory conditions
+- **[Technical Architecture Guide](technical.md)** - Complete technical documentation: tech stack, system architecture, project structure, and development workflow
+- **[Multiplayer Specification](multiplayer.md)** - Real-time architecture and state management
+- **[Asset Specification](assets.md)** - Design system, visual requirements, and component library
+- **[Development Roadmap](roadmap.md)** - Phases, milestones, and success metrics
+- **[Code Examples](examples.md)** - Implementation patterns and code samples
 
 ## **🎮 Quick Overview**
 
@@ -26,9 +27,9 @@ Welcome to the comprehensive documentation for **Satire Empire**, a satirical mu
 
 - **Frontend:** TypeScript with Neobrutalism Components
 - **Backend:** Cloudflare Workers with ES modules and Partykit
-- **Database:** Cloudflare D1 and Durable Objects
+- **Database:** Cloudflare Durable Objects & D1
 - **Map Engine:** Maplibre GL JS
-- **Deployment:** Cloudflare Pages with global CDN
+- **Deployment:** Cloudflare Workers with global CDN
 - **PWA:** Service Worker for offline-first experience
 
 ## **🎯 Development Status**
@@ -42,22 +43,23 @@ The project is currently in **planning phase**. The development roadmap outlines
 ## **📋 Getting Started**
 
 ### **For Developers**
-1. Review the [Technical Specification](technical-specification.md) for architecture details
-2. Check the [Development Roadmap](development-roadmap.md) for current priorities
-3. Familiarize yourself with the [Multiplayer Specification](multiplayer-specification.md) for real-time features
-4. Study the [Gameplay Specification](gameplay-specification.md) for core mechanics
+1. Start with the [Technical Architecture Guide](technical.md) - your complete technical reference covering tech stack, system architecture, project structure, and development workflow
+2. Check the [Development Roadmap](roadmap.md) for current priorities and phases
+3. Familiarize yourself with the [Multiplayer Specification](multiplayer.md) for real-time features
+4. Study the [Gameplay Specification](gameplay.md) for core game mechanics
+5. Reference the [Code Examples](examples.md) for implementation patterns and samples
 
 ### **For Designers**
-1. Study the [Asset Specification](asset-specification.md) for design system details
-2. Review the [Game Vision](game-vision.md) for design principles
+1. Study the [Asset Specification](assets.md) for design system details
+2. Review the [Game Vision](vision.md) for design principles
 3. Understand the Neobrutalism aesthetic requirements
-4. Reference the [Gameplay Specification](gameplay-specification.md) for UI requirements
+4. Reference the [Gameplay Specification](gameplay.md) for UI requirements
 
 ### **For Stakeholders**
-1. Start with the [Game Vision](game-vision.md) for high-level understanding
-2. Review the [Development Roadmap](development-roadmap.md) for timeline and milestones
+1. Start with the [Game Vision](vision.md) for high-level understanding
+2. Review the [Development Roadmap](roadmap.md) for timeline and milestones
 3. Check success metrics and risk mitigation strategies
-4. Explore the [Gameplay Specification](gameplay-specification.md) for feature scope
+4. Explore the [Gameplay Specification](gameplay.md) for feature scope
 
 ## **🔗 Key Resources**
 

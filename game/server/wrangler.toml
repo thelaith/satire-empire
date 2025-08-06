@@ -1,0 +1,50 @@
+name = "satire-empire-server"
+main = "worker.ts"
+compatibility_date = "2024-02-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Worker configuration
+[env.development]
+name = "satire-empire-server-dev"
+
+[env.staging]
+name = "satire-empire-server-staging"
+
+[env.production]
+name = "satire-empire-server-prod"
+
+# Environment variables
+[vars]
+ENVIRONMENT = "development"
+
+# KV namespaces
+[[kv_namespaces]]
+binding = "KV"
+id = "your-kv-namespace-id"
+preview_id = "your-preview-kv-namespace-id"
+
+# D1 databases
+[[d1_databases]]
+binding = "DB"
+database_name = "satire-empire-db"
+database_id = "your-d1-database-id"
+
+# Durable Objects
+[[durable_objects.bindings]]
+name = "GAME_STATE"
+class_name = "GameStateObject"
+script_name = "satire-empire-server"
+
+# Build configuration
+[build]
+command = "tsc && esbuild worker.ts --bundle --format=esm --target=es2022 --outfile=dist/worker.js"
+cwd = "."
+
+# Limits and resources
+[limits]
+cpu_ms = 50000
+memory_mb = 128
+
+# Placement
+[placement]
+mode = "smart"

@@ -1,0 +1,110 @@
+// Satire Empire - AI Assistant Rules
+// Context Engineering for Game Development
+
+### 🎮 Project Awareness & Context
+- **Always read the game documentation** at the start of conversations: `docs/vision.md`, `docs/gameplay.md`, `docs/technical.md`
+- **Check the development roadmap** in `docs/roadmap.md` before starting new features
+- **Use consistent patterns** from the `examples/` folder and follow the Neobrutalism design system
+- **Leverage specialized agents** from the `agents/` folder for specific development tasks
+- **Follow the context engineering workflow** from `template/` for complex features
+
+### 🏗️ Architecture & Tech Stack
+- **TypeScript ONLY** - No Preact or vanilla JavaScript [[memory:5387466]]
+- **ES Modules everywhere** for optimal Cloudflare Workers performance
+- **Cloudflare Stack**: Workers, D1, KV, Durable Objects, Partykit for multiplayer
+- **Frontend**: Vite + TypeScript, Maplibre GL JS for maps, PWA with Service Workers
+- **UI Library**: Neobrutalism Components based on shadcn/ui
+- **Testing**: Vitest for unit tests, Playwright for E2E testing
+
+### 🧱 Code Structure & Modularity
+- **Never create files longer than 500 lines** - Split into focused modules
+- **Game folder structure**:
+  - `game/client/` - Frontend TypeScript modules  
+  - `game/server/` - Cloudflare Workers backend
+  - `game/shared/` - Shared types and utilities
+  - `game/assets/` - Game assets and static files
+- **Clear module organization**:
+  - `types.ts` - TypeScript interfaces and types
+  - `utils.ts` - Utility functions
+  - `constants.ts` - Game constants and configuration
+- **Barrel exports** for clean imports: `index.ts` files in each module
+
+### 🎯 Game Development Patterns
+- **Turn-based gameplay** with "News Cycle" structure (Morning Brief → Action Phase → Breaking News)
+- **Asymmetric factions** with unique abilities and victory conditions
+- **Real-time multiplayer** using Partykit for state synchronization
+- **Event-driven architecture** for game actions and state changes
+- **Modular faction system** for easy expansion
+- **Satirical tone** in all content and UI text
+
+### 🧪 Testing & Quality
+- **Always create Vitest tests** for new game logic and utilities
+- **Playwright E2E tests** for critical game flows (joining games, taking turns)
+- **Test structure**: Mirror game structure in `tests/` folder
+- **Mock Cloudflare APIs** for local development and testing
+- **Test coverage**: Include edge cases, error states, and multiplayer scenarios
+
+### 🎨 UI/UX Standards
+- **Neobrutalist design principles**: Bold, high contrast, satirical aesthetics
+- **Accessibility first**: WCAG 2.1 AA compliance, keyboard navigation, screen readers
+- **Mobile-first responsive**: Touch-optimized controls, 10-20 minute matches
+- **Performance focus**: Fast loading, smooth animations, low-latency multiplayer
+- **Progressive Web App**: Offline capability, installable, push notifications
+
+### 📱 Platform & Performance
+- **Edge-first architecture** for global low latency
+- **PWA features**: Service worker, offline-first, installable
+- **Bundle optimization**: Tree shaking, code splitting, minimal dependencies
+- **Real-time constraints**: Sub-100ms action feedback, synchronized game state
+- **Mobile performance**: 60fps animations, efficient touch handling
+
+### ✅ Development Workflow
+- **Context engineering approach**: Use PRP workflow for complex features
+- **Leverage agents**: Use specialized agents from `agents/` folder for domain expertise
+- **Git workflow**: Conventional commits, feature branches
+- **Documentation**: Update relevant docs when adding features
+- **Examples**: Add code examples to `examples/` folder for reusable patterns
+
+### 📚 Documentation Standards
+- **Game design documents**: Keep `docs/` updated with design changes
+- **Code documentation**: JSDoc comments for all public APIs
+- **Examples**: Maintain `examples.md` with code samples and patterns
+- **Architecture diagrams**: Update Mermaid diagrams when architecture changes
+- **Changelog**: Document breaking changes and new features
+
+### 🤖 AI Development Guidelines
+- **Use specialized agents**: Reference appropriate agents for domain-specific tasks
+- **Never hallucinate game rules** - Always reference existing documentation
+- **Ask for clarification** on game balance and faction design decisions
+- **Suggest game examples** from similar strategy games when relevant
+- **Consider multiplayer implications** for all game mechanic changes
+- **Maintain satirical tone** while keeping gameplay balanced and fun
+
+### 🔧 Development Environment
+- **Node.js 18+** with pnpm for package management
+- **Cloudflare Wrangler** for local Workers development
+- **Local development**: Use Miniflare for Workers simulation
+- **Environment files**: Separate configs for dev/staging/production
+- **Hot reload**: Vite HMR for frontend, Wrangler for backend
+
+### 🎪 Game-Specific Rules
+- **Faction balance**: Every faction must have counters and trade-offs
+- **Satirical accuracy**: Parody should be recognizable but not offensive
+- **10-20 minute matches**: All mechanics must fit this time constraint
+- **2-8 players**: Scale mechanics appropriately for different player counts
+- **Global audience**: Avoid region-specific references that don't translate
+- **Accessibility**: Complex strategy must remain approachable to new players
+
+### 🚀 Deployment & Operations
+- **Cloudflare deployment**: Use Workers, Pages, and edge infrastructure
+- **Environment management**: Separate staging and production environments  
+- **Monitoring**: Error tracking, performance monitoring, game analytics
+- **Rollback strategy**: Versioned deployments with quick rollback capability
+- **Scaling**: Design for global audience with minimal latency
+
+### 🎲 Game Balance & Testing
+- **Playtesting required**: All new mechanics need multiplayer validation
+- **AI bot integration**: Ensure bots can use new mechanics for testing
+- **Replay system**: All games must be replayable for balance analysis
+- **Metrics tracking**: Game length, player actions, victory conditions
+- **A/B testing**: Framework for testing balance changes and new features

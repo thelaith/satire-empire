@@ -1,4 +1,4 @@
-# **Multiplayer Specification**
+# **Multiplayer**
 
 ## **1. Real-time Layer: Partykit**
 

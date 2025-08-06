@@ -1,4 +1,4 @@
-# **Asset Specification**
+# **Assets**
 
 ## **1. Design System: Neobrutalism**
 

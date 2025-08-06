@@ -1,4 +1,4 @@
-# **Gameplay Specification**
+# **Gameplay**
 
 ## **1. Core Gameplay Loop: "The News Cycle"**
 
